@@ -1,12 +1,14 @@
 //class qui contient un constructor implicite
-class gooferConstructor{
-  constructor(name, age, genome, sex, position, health) {
+class Goofer{
+  constructor(name, age, genome, sex, health) {
     this.name = name;
     this.age = age;
     this.genome = genome;
     this.sex = sex;
-    this.position = position;
     this.health = health;
+    this.position = position;
   }
 }
-module.exports = gooferConstructor;
+module.exports = Goofer;
+
+

@@ -11,7 +11,6 @@ const babyGooferMaker = (papaGoofer, mamaGoofer) => {
     0,
     babyGenome,
     sex(),
-    mamaGoofer.position,
     1
   );
 };
