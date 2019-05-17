@@ -26,7 +26,7 @@ class city {
   emitFoodArrive() {
     setInterval(() => {
       this.eventHandler.emit("food send by god");
-    }, 100000);
+    }, 10000);
   }
   emitWildAnimalsArrive() {
     setInterval(() => {
@@ -42,7 +42,7 @@ class city {
         const x = this.getRandomInt(xmax);
         const y = this.getRandomInt(ymax);
         if (this.map[x][y].isHere === "nothing") {
-          this.map[x][y].isHere = newGoofer(this.eventHandler);;
+          this.map[x][y].isHere = newGoofer(this.eventHandler);
           this.map[x][y].isHere.position = { latitude: x, longitude: y };
           console.log(chalk.green("goofer placé", x, y));
           console.log(this.map[x][y])
