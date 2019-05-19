@@ -11,12 +11,12 @@ class Goofer {
     this.gooferMoving = () => {
      const x = this.position.latitude + this.getDirection();
       const y = this.position.longitude + this.getDirection();
-      this.emitMoved(x,y);
+      const name = this.name;
+      this.emitMoved({name,x,y});
     };
 
     this.moveListiner();
   };
-
 
   getDirection() {
     const direction =[-1,0,1]
@@ -26,8 +26,9 @@ class Goofer {
     this.myEvents.on("One more day passed move your ass", this.gooferMoving);
   }
 
-  emitMoved(x,y){
-      this.myEvents.emit("i have moved",x,y);
+  emitMoved(element){
+    console.log("ok");
+      this.myEvents.emit("i have moved",element);
     }
   }
 
