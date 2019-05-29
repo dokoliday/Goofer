@@ -27,7 +27,6 @@ class Goofer {
   }
 
   emitMoved(element){
-    console.log("ok");
       this.myEvents.emit("i have moved",element);
     }
   }
